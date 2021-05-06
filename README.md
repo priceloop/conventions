@@ -18,12 +18,12 @@ Use the following pre-commit hooks:
 * isort
 * pylint following [Google styling guide](https://google.github.io/styleguide/pyguide.html)
 * black formater with the following flags:
-    * -l 110 -S -t
+    * `-l 110 -S -t`
     * VSCode settings.json
 ```json
 "python.formatting.blackArgs": ["-l", "110", "-S", "-t"]
 ```
-* flake88
+* flake8
 * docstrings: [Google conventions](https://google.github.io/styleguide/pyguide.html)
 * Quotes: double
 * mypy
