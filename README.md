@@ -27,6 +27,45 @@ Use the following pre-commit hooks:
 * docstrings: [Google conventions](https://google.github.io/styleguide/pyguide.html)
 * Quotes: double
 * mypy
+* Use pre-commit with the following hooks:
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.2.3
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: flake8
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.720
+    hooks:
+      - id: mypy
+        args: [--allow-redefinition, --ignore-missing-imports]
+
+  - repo: local
+    hooks:
+      - id: isort
+        name: "Sort imports"
+        language: system
+        types: [file, python]
+        entry: isort
+      - id: pylint
+        name: "PyLint"
+        language: system
+        types: [file, python]
+        files: .
+        exclude: test_*.py
+        entry: python3 -m pylint
+      - id: black
+        name: "Black"
+        language: system
+        pass_filenames: false
+        entry: black .
+        args: [--safe, --quiet, "--line-length=110", "--skip-string-normalization"]
+```
 
 ## Golang Styling Guide
 Use pre-commit with the following hooks:
