@@ -15,51 +15,9 @@ Our Priceloop Engineering conventions for Scala, Python, Git Workflow etc.
 
 ## Scala Styling Guide
 
-We use [Scalafmt](https://scalameta.org/scalafmt/) to format our code. Use the following config in your projects:
+We use [Scalafmt](https://scalameta.org/scalafmt/) to format our code. Use [this config](https://github.com/priceloop/nocode/blob/develop/.scalafmt.conf) in your projects.
 
-```
-version = 3.3.1
 
-runner.dialect                  = scala213source3
-style                           = defaultWithAlign
-maxColumn                       = 120
-includeCurlyBraceInSelectChains = false
-danglingParentheses.preset      = true
-lineEndings                     = preserve
-trailingCommas                  = always
-
-continuationIndent {
-  callSite = 2
-  defnSite = 2
-}
-
-newlines {
-  penalizeSingleSelectMultiArgList = false
-  alwaysBeforeElseAfterCurlyIf     = true
-}
-
-project {
-  git = true
-  excludeFilters = [
-    target/
-  ]
-}
-
-binPack {
-  parentConstructors = true
-}
-
-rewrite {
-  rules = [RedundantParens, SortImports, PreferCurlyFors]
-}
-
-align {
-  preset                   = most
-  arrowEnumeratorGenerator = true
-  tokens."+"               = [":=", "+=", "++="]
-  openParenCallSite        = false
-}
-```
 
 ## Python Styling Guide
 
