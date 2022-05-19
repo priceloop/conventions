@@ -161,18 +161,11 @@ ai.priceloop.dataplatform.metadata
 
 ## Git Commit Structure
 
+- In general, follow the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary) guidelines
 - Be descriptive
 - Use all lower-case
 - Limit punctuations (no dots, no commas)
-- Include one of the specified types
-  - docs: Documentation only changes
-  - feat: A new feature
-  - fix: A bug fix
-  - refactor: A code change that neither fixes a bug nor adds a feature
-  - test: Adding missing tests or correcting existing tests
-  - chore: updating grunt tasks etc; no production code change
 - Short (under 70 characters is best)
-- In general, follow the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary) guidelines
 
 👉 Follow the git commit structure for commits that are getting merged. In branches, when you do something temporary (e.g. testing ideas etc), you don't need to follow it
 
