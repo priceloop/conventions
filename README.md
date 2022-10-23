@@ -221,4 +221,4 @@ We use [AWS Secret Manager](https://aws.amazon.com/secrets-manager/) and [github
 ## License
 
 - For private repos, no License necessary
-- For public repos, we should use [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)
+- For public repos, we should use [MIT License](https://opensource.org/licenses/MIT)
